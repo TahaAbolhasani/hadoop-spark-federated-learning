@@ -1,0 +1,3 @@
+client1	Sum: 2197.6000000000004, Count: 58
+client2	Sum: 2381.7999999999997, Count: 57
+client3	Sum: 2568.5999999999985, Count: 57

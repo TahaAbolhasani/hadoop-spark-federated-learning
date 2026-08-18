@@ -1,0 +1,18 @@
+# Hadoop / HDFS runtime data (do not commit)
+docker/hadoop/data/
+
+# Spark runtime files
+docker/spark/**/spark-events/
+docker/spark/**/*.log
+
+# OS / editor junk
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Compiled Java classes (keep only source + the final jar you ship)
+part3_federated_learning/task1_hadoop/src/*.class
+
+# Claude local settings
+.claude/

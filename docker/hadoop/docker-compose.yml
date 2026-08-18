@@ -1,0 +1,43 @@
+version: "3"
+services:
+  hdfs-namenode:
+    image: gelog/hadoop
+    hostname: hdfs-namenode
+    container_name: hdfs-namenode
+    command: hdfs namenode
+    ports:
+      - "50070:50070"
+
+  hdfs-datanode1:
+    image: gelog/hadoop
+    hostname: hdfs-datanode1
+    container_name: hdfs-datanode1
+    command: hdfs datanode
+    depends_on:
+      - hdfs-namenode
+    ports:
+      - "50075:50075"
+
+  hdfs-secondarynamenode:
+    image: gelog/hadoop
+    hostname: hdfs-secondarynamenode
+    container_name: hdfs-secondarynamenode
+    command: hdfs secondarynamenode
+    depends_on:
+      - hdfs-namenode
+    ports:
+      - "50090:50090"
+
+  yarn:
+    image: gelog/hadoop
+    hostname: yarn
+    container_name: yarn
+    command: start-yarn.sh
+    depends_on:
+      - hdfs-namenode
+      - hdfs-datanode1
+    ports:
+      - "8088:8088"
+      - "8042:8042"
+    volumes:
+      - ./data:/data

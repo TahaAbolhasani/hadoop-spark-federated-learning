@@ -1,0 +1,169 @@
+26/08/16 11:59:18 INFO SparkContext: Running Spark version 3.3.0
+26/08/16 11:59:18 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/08/16 11:59:18 INFO ResourceUtils: ==============================================================
+26/08/16 11:59:18 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/08/16 11:59:18 INFO ResourceUtils: ==============================================================
+26/08/16 11:59:18 INFO SparkContext: Submitted application: FederatedAveraging
+26/08/16 11:59:18 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/08/16 11:59:18 INFO ResourceProfile: Limiting resource is cpu
+26/08/16 11:59:18 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/08/16 11:59:18 INFO SecurityManager: Changing view acls to: root
+26/08/16 11:59:18 INFO SecurityManager: Changing modify acls to: root
+26/08/16 11:59:18 INFO SecurityManager: Changing view acls groups to: 
+26/08/16 11:59:18 INFO SecurityManager: Changing modify acls groups to: 
+26/08/16 11:59:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+26/08/16 11:59:19 INFO Utils: Successfully started service 'sparkDriver' on port 44921.
+26/08/16 11:59:19 INFO SparkEnv: Registering MapOutputTracker
+26/08/16 11:59:19 INFO SparkEnv: Registering BlockManagerMaster
+26/08/16 11:59:19 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/08/16 11:59:19 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/08/16 11:59:19 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/08/16 11:59:19 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-8ea5e406-8c40-4c01-83c1-4dc21e1b9cd1
+26/08/16 11:59:19 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+26/08/16 11:59:19 INFO SparkEnv: Registering OutputCommitCoordinator
+26/08/16 11:59:19 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/08/16 11:59:20 INFO Executor: Starting executor ID driver on host a7b8135ea659
+26/08/16 11:59:20 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/08/16 11:59:20 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39125.
+26/08/16 11:59:20 INFO NettyBlockTransferService: Server created on a7b8135ea659:39125
+26/08/16 11:59:20 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/08/16 11:59:20 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, a7b8135ea659, 39125, None)
+26/08/16 11:59:20 INFO BlockManagerMasterEndpoint: Registering block manager a7b8135ea659:39125 with 366.3 MiB RAM, BlockManagerId(driver, a7b8135ea659, 39125, None)
+26/08/16 11:59:20 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, a7b8135ea659, 39125, None)
+26/08/16 11:59:20 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, a7b8135ea659, 39125, None)
+Loaded 3 client records from Hadoop output: /tmp/result.txt
+('client1', (2197.6000000000004, 58))
+('client2', (2381.7999999999997, 57))
+('client3', (2568.5999999999985, 57))
+26/08/16 11:59:21 INFO SparkContext: Starting job: sum at /tmp/main.py:63
+26/08/16 11:59:21 INFO DAGScheduler: Got job 0 (sum at /tmp/main.py:63) with 1 output partitions
+26/08/16 11:59:21 INFO DAGScheduler: Final stage: ResultStage 0 (sum at /tmp/main.py:63)
+26/08/16 11:59:21 INFO DAGScheduler: Parents of final stage: List()
+26/08/16 11:59:21 INFO DAGScheduler: Missing parents: List()
+26/08/16 11:59:21 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[1] at sum at /tmp/main.py:63), which has no missing parents
+26/08/16 11:59:21 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 7.0 KiB, free 366.3 MiB)
+26/08/16 11:59:21 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 4.4 KiB, free 366.3 MiB)
+26/08/16 11:59:21 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on a7b8135ea659:39125 (size: 4.4 KiB, free: 366.3 MiB)
+26/08/16 11:59:21 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1513
+26/08/16 11:59:21 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (PythonRDD[1] at sum at /tmp/main.py:63) (first 15 tasks are for partitions Vector(0))
+26/08/16 11:59:21 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks resource profile 0
+26/08/16 11:59:21 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (a7b8135ea659, executor driver, partition 0, PROCESS_LOCAL, 4534 bytes) taskResourceAssignments Map()
+26/08/16 11:59:21 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+26/08/16 11:59:22 INFO PythonRunner: Times: total = 577, boot = 527, init = 50, finish = 0
+26/08/16 11:59:22 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1369 bytes result sent to driver
+26/08/16 11:59:23 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1187 ms on a7b8135ea659 (executor driver) (1/1)
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+26/08/16 11:59:23 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 38261
+26/08/16 11:59:23 INFO DAGScheduler: ResultStage 0 (sum at /tmp/main.py:63) finished in 1.451 s
+26/08/16 11:59:23 INFO DAGScheduler: Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Killing all running tasks in stage 0: Stage finished
+26/08/16 11:59:23 INFO DAGScheduler: Job 0 finished: sum at /tmp/main.py:63, took 1.528557 s
+26/08/16 11:59:23 INFO SparkContext: Starting job: sum at /tmp/main.py:64
+26/08/16 11:59:23 INFO DAGScheduler: Got job 1 (sum at /tmp/main.py:64) with 1 output partitions
+26/08/16 11:59:23 INFO DAGScheduler: Final stage: ResultStage 1 (sum at /tmp/main.py:64)
+26/08/16 11:59:23 INFO DAGScheduler: Parents of final stage: List()
+26/08/16 11:59:23 INFO DAGScheduler: Missing parents: List()
+26/08/16 11:59:23 INFO DAGScheduler: Submitting ResultStage 1 (PythonRDD[2] at sum at /tmp/main.py:64), which has no missing parents
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.0 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.4 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on a7b8135ea659:39125 (size: 4.4 KiB, free: 366.3 MiB)
+26/08/16 11:59:23 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1513
+26/08/16 11:59:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (PythonRDD[2] at sum at /tmp/main.py:64) (first 15 tasks are for partitions Vector(0))
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks resource profile 0
+26/08/16 11:59:23 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1) (a7b8135ea659, executor driver, partition 0, PROCESS_LOCAL, 4534 bytes) taskResourceAssignments Map()
+26/08/16 11:59:23 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+26/08/16 11:59:23 INFO PythonRunner: Times: total = 43, boot = -179, init = 221, finish = 1
+26/08/16 11:59:23 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1319 bytes result sent to driver
+26/08/16 11:59:23 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 64 ms on a7b8135ea659 (executor driver) (1/1)
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+26/08/16 11:59:23 INFO DAGScheduler: ResultStage 1 (sum at /tmp/main.py:64) finished in 0.087 s
+26/08/16 11:59:23 INFO DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Killing all running tasks in stage 1: Stage finished
+26/08/16 11:59:23 INFO DAGScheduler: Job 1 finished: sum at /tmp/main.py:64, took 0.098066 s
+Initial Global Average: 41.55813953488371
+26/08/16 11:59:23 INFO SparkContext: Starting job: collect at /tmp/main.py:72
+26/08/16 11:59:23 INFO DAGScheduler: Got job 2 (collect at /tmp/main.py:72) with 1 output partitions
+26/08/16 11:59:23 INFO DAGScheduler: Final stage: ResultStage 2 (collect at /tmp/main.py:72)
+26/08/16 11:59:23 INFO DAGScheduler: Parents of final stage: List()
+26/08/16 11:59:23 INFO DAGScheduler: Missing parents: List()
+26/08/16 11:59:23 INFO DAGScheduler: Submitting ResultStage 2 (PythonRDD[3] at collect at /tmp/main.py:72), which has no missing parents
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 5.6 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.6 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on a7b8135ea659:39125 (size: 3.6 KiB, free: 366.3 MiB)
+26/08/16 11:59:23 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1513
+26/08/16 11:59:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (PythonRDD[3] at collect at /tmp/main.py:72) (first 15 tasks are for partitions Vector(0))
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+26/08/16 11:59:23 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2) (a7b8135ea659, executor driver, partition 0, PROCESS_LOCAL, 4534 bytes) taskResourceAssignments Map()
+26/08/16 11:59:23 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+26/08/16 11:59:23 INFO PythonRunner: Times: total = 41, boot = -80, init = 121, finish = 0
+26/08/16 11:59:23 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 1406 bytes result sent to driver
+26/08/16 11:59:23 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 60 ms on a7b8135ea659 (executor driver) (1/1)
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+26/08/16 11:59:23 INFO DAGScheduler: ResultStage 2 (collect at /tmp/main.py:72) finished in 0.081 s
+26/08/16 11:59:23 INFO DAGScheduler: Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+26/08/16 11:59:23 INFO DAGScheduler: Job 2 finished: collect at /tmp/main.py:72, took 0.093969 s
+Round 1 Local Averages: [('client1', 37.889655172413796), ('client2', 41.7859649122807), ('client3', 45.06315789473682)]
+Round 1 Updated Averages: [('client1', 38.63986342519826), ('client2', 42.41423722912156), ('client3', 44.285586081937)]
+Round 1 Global Average: 41.779895578752274
+26/08/16 11:59:23 INFO SparkContext: Starting job: collect at /tmp/main.py:72
+26/08/16 11:59:23 INFO DAGScheduler: Got job 3 (collect at /tmp/main.py:72) with 1 output partitions
+26/08/16 11:59:23 INFO DAGScheduler: Final stage: ResultStage 3 (collect at /tmp/main.py:72)
+26/08/16 11:59:23 INFO DAGScheduler: Parents of final stage: List()
+26/08/16 11:59:23 INFO DAGScheduler: Missing parents: List()
+26/08/16 11:59:23 INFO DAGScheduler: Submitting ResultStage 3 (PythonRDD[4] at collect at /tmp/main.py:72), which has no missing parents
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 5.6 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.6 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on a7b8135ea659:39125 (size: 3.6 KiB, free: 366.3 MiB)
+26/08/16 11:59:23 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1513
+26/08/16 11:59:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (PythonRDD[4] at collect at /tmp/main.py:72) (first 15 tasks are for partitions Vector(0))
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks resource profile 0
+26/08/16 11:59:23 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3) (a7b8135ea659, executor driver, partition 0, PROCESS_LOCAL, 4534 bytes) taskResourceAssignments Map()
+26/08/16 11:59:23 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+26/08/16 11:59:23 INFO PythonRunner: Times: total = 44, boot = -74, init = 117, finish = 1
+26/08/16 11:59:23 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 1406 bytes result sent to driver
+26/08/16 11:59:23 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 55 ms on a7b8135ea659 (executor driver) (1/1)
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+26/08/16 11:59:23 INFO DAGScheduler: ResultStage 3 (collect at /tmp/main.py:72) finished in 0.074 s
+26/08/16 11:59:23 INFO DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Killing all running tasks in stage 3: Stage finished
+26/08/16 11:59:23 INFO DAGScheduler: Job 3 finished: collect at /tmp/main.py:72, took 0.089117 s
+Round 2 Local Averages: [('client1', 37.889655172413796), ('client2', 41.7859649122807), ('client3', 45.06315789473682)]
+Round 2 Updated Averages: [('client1', 38.58106455564371), ('client2', 41.98233844477149), ('client3', 45.77571937343626)]
+Round 2 Global Average: 42.11304079128382
+26/08/16 11:59:23 INFO SparkContext: Starting job: collect at /tmp/main.py:72
+26/08/16 11:59:23 INFO DAGScheduler: Got job 4 (collect at /tmp/main.py:72) with 1 output partitions
+26/08/16 11:59:23 INFO DAGScheduler: Final stage: ResultStage 4 (collect at /tmp/main.py:72)
+26/08/16 11:59:23 INFO DAGScheduler: Parents of final stage: List()
+26/08/16 11:59:23 INFO DAGScheduler: Missing parents: List()
+26/08/16 11:59:23 INFO DAGScheduler: Submitting ResultStage 4 (PythonRDD[5] at collect at /tmp/main.py:72), which has no missing parents
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 5.6 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.6 KiB, free 366.3 MiB)
+26/08/16 11:59:23 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on a7b8135ea659:39125 (size: 3.6 KiB, free: 366.3 MiB)
+26/08/16 11:59:23 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1513
+26/08/16 11:59:23 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (PythonRDD[5] at collect at /tmp/main.py:72) (first 15 tasks are for partitions Vector(0))
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+26/08/16 11:59:23 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4) (a7b8135ea659, executor driver, partition 0, PROCESS_LOCAL, 4534 bytes) taskResourceAssignments Map()
+26/08/16 11:59:23 INFO Executor: Running task 0.0 in stage 4.0 (TID 4)
+26/08/16 11:59:23 INFO PythonRunner: Times: total = 43, boot = -69, init = 111, finish = 1
+26/08/16 11:59:23 INFO Executor: Finished task 0.0 in stage 4.0 (TID 4). 1406 bytes result sent to driver
+26/08/16 11:59:23 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 59 ms on a7b8135ea659 (executor driver) (1/1)
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+26/08/16 11:59:23 INFO DAGScheduler: ResultStage 4 (collect at /tmp/main.py:72) finished in 0.079 s
+26/08/16 11:59:23 INFO DAGScheduler: Job 4 is finished. Cancelling potential speculative or zombie tasks for this job
+26/08/16 11:59:23 INFO TaskSchedulerImpl: Killing all running tasks in stage 4: Stage finished
+26/08/16 11:59:23 INFO DAGScheduler: Job 4 finished: collect at /tmp/main.py:72, took 0.092134 s
+Round 3 Local Averages: [('client1', 37.889655172413796), ('client2', 41.7859649122807), ('client3', 45.06315789473682)]
+Round 3 Updated Averages: [('client1', 37.11793384235881), ('client2', 40.85464442014931), ('client3', 44.90927351703811)]
+Round 3 Global Average: 40.96061725984874
+26/08/16 11:59:23 INFO SparkUI: Stopped Spark web UI at http://a7b8135ea659:4040
+26/08/16 11:59:23 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+26/08/16 11:59:23 INFO MemoryStore: MemoryStore cleared
+26/08/16 11:59:23 INFO BlockManager: BlockManager stopped
+26/08/16 11:59:23 INFO BlockManagerMaster: BlockManagerMaster stopped
+26/08/16 11:59:23 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+26/08/16 11:59:23 INFO SparkContext: Successfully stopped SparkContext
+26/08/16 11:59:24 INFO ShutdownHookManager: Shutdown hook called
+26/08/16 11:59:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-b23923f0-6909-40cf-aa05-a16af9d9bf18
+26/08/16 11:59:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-b23923f0-6909-40cf-aa05-a16af9d9bf18/pyspark-1008444c-ca81-4b8f-8a30-dde6f55ea01f
+26/08/16 11:59:24 INFO ShutdownHookManager: Deleting directory /tmp/spark-040c9758-dea6-41ab-b50c-5c29b3e98198
