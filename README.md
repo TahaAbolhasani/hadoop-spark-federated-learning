@@ -88,4 +88,4 @@ Detailed steps, code, and execution screenshots are documented in each task's ow
 
 ## Author
 
-Taha Abolhasani
+Taha Abolhasani — Computer Engineering student, aspiring Cloud Engineer.
